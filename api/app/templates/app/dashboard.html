@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Dashboard</h2>
+
+<div class="grid-2">
+    <div class="card">
+        {{ sales_plot_html|safe }}
+    </div>
+
+    <div class="card">
+        {{ pending_plot_html|safe }}
+    </div>
+</div>
+
+{% endblock %}

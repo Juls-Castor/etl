@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Data Engineering Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Plotly CDN -->
+    <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f6fa;
+      }
+
+      .navbar {
+        background: #1f2937;
+        color: white;
+        padding: 14px 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .container {
+        padding: 20px 40px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 14px;
+        padding: 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      @media (max-width: 900px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">Sales Analytics Dashboard</div>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+  </body>
+</html>
